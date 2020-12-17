@@ -1,6 +1,7 @@
 	var IE = document.all?true:false;
-	if (!IE) document.captureEvents(Event.MOUSEMOVE);
+	if (!IE) {document.captureEvents(Event.MOUSEMOVE); document.captureEvents(Event.touch}
   	document.onmousemove = position; 
+	document.touch = position;
 
 	var noise_active = false;
 	
