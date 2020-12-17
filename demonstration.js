@@ -1,7 +1,6 @@
 	var IE = document.all?true:false;
-	if (!IE) {document.captureEvents(Event.MOUSEMOVE); document.captureEvents(Event.touch}
+	if (!IE) document.captureEvents(Event.MOUSEMOVE);
   	document.onmousemove = position; 
-	document.touch = position;
 
 	var noise_active = false;
 	
@@ -48,22 +47,6 @@
 			y = e.pageY;
 		  }
 		 
-		function handleTouchmove(event){
-		event.preventDefault(); // we don't want to scroll
-		var touch = event.touches[0];
-
-		if(IE){
-			var x = touch.clientX + document.body.scrollLeft;
-			var y = touch.clientY + document.body.scrollTop;
-		}
-		else{
-			x = event.pageX;
-			y = event.pageY;
-		}
-
-		
-		//draw(x, y);
-		}
 
 		//detection square size
 		var square_x_min = x - (square_size/2) - image.offsetLeft;
